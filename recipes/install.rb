@@ -20,7 +20,7 @@ include_recipe 'redisio::default'
 include_recipe 'ulimit::default'
 
 redis = node['redisio']
-location = "#{redis['mirror']}/#{redis['base_name']}#{redis['version']}.#{redis['artifact_type']}"
+location = "http://192.168.70.25/redis-2.8.24.tar.gz"
 
 redis_instances = redis['servers']
 if redis_instances.nil?
