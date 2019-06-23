@@ -27,7 +27,8 @@ else
   build_essential 'install build deps'
 
   redis = node['redisio']
-  location = "#{redis['mirror']}/#{redis['base_name']}#{redis['version']}.#{redis['artifact_type']}"
+  #location = "#{redis['mirror']}/#{redis['base_name']}#{redis['version']}.#{redis['artifact_type']}"
+  location = "http://192.168.70.25/redis-2.8.24.tar.gz"
 
   redisio_install 'redis-installation' do
     version redis['version'] if redis['version']
